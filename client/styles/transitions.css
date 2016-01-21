@@ -1,0 +1,46 @@
+
+.page-transition-enter {
+    opacity: 0;
+}
+.page-transition-enter.page-transition-enter-active {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave {
+    opacity: 1;
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave.page-transition-leave-active {
+    opacity: 0;
+}
+
+
+.page-transition-enter  .container-content {
+    opacity: 0;
+    transform:   translate(-250px,0);
+    transform: translate3d(-250px,0,0);
+}
+.page-transition-enter.page-transition-enter-active .container-content {
+    opacity: 1;
+    transform:   translate(0,0);
+    transform: translate3d(0,0,0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave .container-content {
+    opacity: 1;
+    transform: translate(0,0,0);
+    transform: translate3d(0,0,0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.page-transition-leave.page-transition-leave-active .container-content {
+    opacity: 0;
+    transform:   translate(250px,0);
+    transform: translate3d(250px,0,0);
+}
